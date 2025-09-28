@@ -13,6 +13,7 @@ variable "cidr_vpc" {
 variable "tags" {
   default = {
     Name = "fiap-terraform-tech-food"
+    Environment = "dev"
   }
 }
 
