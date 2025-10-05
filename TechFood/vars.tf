@@ -20,3 +20,15 @@ variable "tags" {
 variable "intance_type" {
   default = "t2.micro"
 }
+
+variable "db_username" {
+  description = "Usuário do banco de dados"
+  type        = string
+  sensitive   = true
+}
+
+variable "db_password" {
+  description = "Senha do banco de dados"
+  type        = string
+  sensitive   = true
+}
