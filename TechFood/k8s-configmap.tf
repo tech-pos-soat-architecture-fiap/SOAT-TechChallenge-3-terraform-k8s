@@ -12,5 +12,7 @@ metadata:
     version: v1
 data:
   SPRING_DATASOURCE_URL: "jdbc:postgresql://tech-food.c34qiakmaq1a.us-east-1.rds.amazonaws.com/tech-food"
+  POSTGRES_USER: ${var.db_username}
+  POSTGRES_PASSWORD: ${var.db_password}
 YAML
 }
