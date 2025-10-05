@@ -28,8 +28,6 @@ spec:
           envFrom:
             - configMapRef:
                 name: tech-food-configmap-v1
-            - secretRef:
-                name: tech-food-db-secret-v1
           resources:
             requests:
               memory: "256Mi"
