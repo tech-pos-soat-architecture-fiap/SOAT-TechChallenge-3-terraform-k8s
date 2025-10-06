@@ -11,7 +11,9 @@ resource "aws_lambda_function" "auth_lambda" {
   handler       = "lambda_function.lambda_handler"
   timeout       = 15
   memory_size   = 256
-  publish       = false                     
+  publish       = false   
+  filename = "${path.module}/lambda/stub.zip"
+  source_code_hash = filebase64sha256("${path.module}/lambda/stub.zip")                  
  
   layers = [var.jwt_layer_arn]
 

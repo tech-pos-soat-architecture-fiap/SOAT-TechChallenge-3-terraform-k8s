@@ -20,11 +20,11 @@ output "nlb_dns_name" {
 }
 
 output "auth_func_arn" {
-  value       = aws_lambda_function.auth_func.arn
+  value       = aws_lambda_function.auth_lambda.arn
   description = "ARN da função Lambda auth_func"
 }
 
 output "auth_func_name" {
-  value       = aws_lambda_function.auth_func.function_name
+  value       = aws_lambda_function.auth_lambda.function_name
   description = "Nome da função Lambda"
 }
