@@ -1,5 +1,5 @@
 resource "aws_lambda_function" "auth_func" {
-  
+
   depends_on = [ 
     kubectl_manifest.deploy,
     aws_iam_role.lambda_exec_role
@@ -12,9 +12,7 @@ resource "aws_lambda_function" "auth_func" {
   timeout       = 15
   memory_size   = 256
   publish       = false                     
-  filename         = "${path.module}/dummy.zip"
-  source_code_hash = filebase64sha256("${path.module}/dummy.zip")
-
+ 
   layers = [var.jwt_layer_arn]
 
   environment {
