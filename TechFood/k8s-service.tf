@@ -9,7 +9,6 @@ metadata:
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-type: nlb
     service.beta.kubernetes.io/aws-load-balancer-scheme: internal
-    service.beta.kubernetes.io/aws-load-balancer-cross-zone-load-balancing-enabled: true
 spec:
   selector:
     app: techfood
