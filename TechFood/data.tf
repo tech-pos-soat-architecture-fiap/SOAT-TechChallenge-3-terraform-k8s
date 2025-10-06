@@ -14,6 +14,7 @@ data "aws_lb" "eks_nlb" {
   tags = {
     "kubernetes.io/service-name" = "techfood/tech-food-service"
   }
+  depends_on = [ aws_eks_cluster.cluster ]
 }
 
 data "aws_iam_policy_document" "lambda_assume_role" {
