@@ -1,4 +1,10 @@
 resource "aws_lambda_function" "auth_func" {
+  
+  depends_on = [ 
+    kubectl_manifest.deploy,
+    aws_iam_role.lambda_exec_role
+  ]
+  
   function_name = "auth_func"
   role          = aws_iam_role.lambda_exec_role.arn
   runtime       = "python3.12"              

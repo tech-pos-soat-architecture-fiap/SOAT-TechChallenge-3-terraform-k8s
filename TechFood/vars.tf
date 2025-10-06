@@ -36,4 +36,5 @@ variable "db_password" {
 variable "jwt_layer_arn" {
   type        = string
   description = "ARN da Lambda Layer existente (jwt-layer)"
+  default     = "arn:aws:lambda:us-east-1:207347338383:layer:jwt-layer:1"
 }
