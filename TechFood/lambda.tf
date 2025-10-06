@@ -1,7 +1,7 @@
 resource "aws_lambda_function" "auth_lambda" {
 
   depends_on = [ 
-    kubectl_manifest.deploy,
+    aws_eks_cluster.cluster,
     aws_iam_role.lambda_exec_role
   ]
   
@@ -30,7 +30,7 @@ resource "aws_lambda_function" "auth_lambda" {
 resource "aws_lambda_function" "login_lambda" {
 
   depends_on = [ 
-    kubectl_manifest.deploy,
+    aws_eks_cluster.cluster,
     aws_iam_role.lambda_exec_role
   ]
   
