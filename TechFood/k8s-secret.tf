@@ -12,7 +12,7 @@ metadata:
     version: v1
 type: Opaque
 data:
-  POSTGRES_USER: ${var.db_username}
-  POSTGRES_PASSWORD: ${var.db_password}
+  POSTGRES_USER: ${base64encode(var.db_username)}
+  POSTGRES_PASSWORD: ${base64encode(var.db_password)}
 YAML
 }
