@@ -1,4 +1,4 @@
-resource "aws_lambda_function" "auth_func" {
+resource "aws_lambda_function" "auth_lambda" {
 
   depends_on = [ 
     kubectl_manifest.deploy,
