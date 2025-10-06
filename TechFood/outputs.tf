@@ -13,3 +13,18 @@ output "subnet_cidr" {
 output "subnet_id" {
   value = aws_subnet.subnet_public[*].id
 }
+
+output "nlb_dns_name" {
+  value       = data.aws_lb.eks_nlb.dns_name
+  description = "DNS do NLB do EKS"
+}
+
+output "auth_func_arn" {
+  value       = aws_lambda_function.auth_func.arn
+  description = "ARN da função Lambda auth_func"
+}
+
+output "auth_func_name" {
+  value       = aws_lambda_function.auth_func.function_name
+  description = "Nome da função Lambda"
+}

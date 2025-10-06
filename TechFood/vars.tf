@@ -32,3 +32,8 @@ variable "db_password" {
   type        = string
   sensitive   = true
 }
+
+variable "jwt_layer_arn" {
+  type        = string
+  description = "ARN da Lambda Layer existente (jwt-layer)"
+}
