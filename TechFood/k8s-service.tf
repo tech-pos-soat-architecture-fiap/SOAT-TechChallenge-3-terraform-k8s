@@ -13,5 +13,6 @@ spec:
     - port: 80
       targetPort: 8000
   type: LoadBalancer
+  loadBalancerClass: service.k8s.aws/nlb
 YAML
 }
