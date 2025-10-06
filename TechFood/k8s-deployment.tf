@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: techfood
-          image: 207347338383.dkr.ecr.us-east-1.amazonaws.com/techfood:v5
+          image: 207347338383.dkr.ecr.us-east-1.amazonaws.com/techfood:v6
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8000
