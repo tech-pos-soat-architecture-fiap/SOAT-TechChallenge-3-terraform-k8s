@@ -28,3 +28,7 @@ output "auth_func_name" {
   value       = aws_lambda_function.auth_lambda.function_name
   description = "Nome da função Lambda"
 }
+
+output "http_api_invoke_url" {
+  value = aws_apigatewayv2_stage.default.invoke_url
+}
