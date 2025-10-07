@@ -14,3 +14,4 @@ resource "aws_eks_access_policy_association" "access_entry_association" {
     type       = "cluster"
   }
 }
+
