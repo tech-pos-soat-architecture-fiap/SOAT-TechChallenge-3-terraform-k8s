@@ -14,14 +14,3 @@ resource "aws_eks_access_policy_association" "access_entry_association" {
     type       = "cluster"
   }
 }
-
-# resource "aws_iam_role" "lambda_exec_role" {
-#   name               = "auth_func_exec_role"
-#   assume_role_policy = data.aws_iam_policy_document.lambda_assume_role.json
-# }
-
-# resource "aws_iam_role_policy_attachment" "lambda_basic_logs" {
-#   role       = aws_iam_role.lambda_exec_role.name
-#   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
-#   depends_on = [ aws_iam_role.lambda_exec_role ]
-# }
